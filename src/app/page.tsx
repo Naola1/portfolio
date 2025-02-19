@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Mail, Code, Terminal, Database, MapPin, Phone, Linkedin } from 'lucide-react'
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -38,12 +37,12 @@ export default function CyberPortfolio() {
               Specialized in full-stack development with a focus on robust backend systems and seamless user experiences.
             </p>
             <div className="flex justify-center gap-6">
-            <Link href="mailto:naolmitiku@gmail.com">
+              <Link href="mailto:naolmitiku@gmail.com">
                 <Button className="bg-cyan-500 hover:bg-cyan-600 text-black">
                   <Mail className="mr-2" /> Contact
                 </Button>
               </Link>
-              <Link href="https://github.com/Naola1" target="_blank">
+              <Link href="https://github.com/Naola1" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="border-cyan-500 text-cyan-500">
                   <Github className="mr-2" /> GitHub
                 </Button>
@@ -57,6 +56,7 @@ export default function CyberPortfolio() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
             <Card className="p-8 bg-black/50 backdrop-blur border border-cyan-500/20">
@@ -94,6 +94,7 @@ export default function CyberPortfolio() {
                 key={category.title}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
                 <Card className="p-6 bg-black/50 backdrop-blur border border-cyan-500/20 hover:border-cyan-500 transition-colors">
@@ -133,6 +134,7 @@ export default function CyberPortfolio() {
                   key={project.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
                 >
                   <Card className="p-6 bg-black/50 backdrop-blur border border-cyan-500/20 hover:border-cyan-500 group transition-all duration-300">
@@ -175,17 +177,17 @@ export default function CyberPortfolio() {
                   <span>+251 912 887 725</span>
                 </div>
                 <div className="flex justify-center gap-4">
-                <Link href="mailto:naolmitiku@gmail.com">
+                  <Link href="mailto:naolmitiku@gmail.com">
                     <Button className="bg-cyan-500 hover:bg-cyan-600 text-black">
                       <Mail className="mr-2" /> Send Message
                     </Button>
                   </Link>
-                  <Link href="https://github.com/Naola1" target="_blank">
+                  <Link href="https://github.com/Naola1" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-cyan-500 text-cyan-500">
                       <Github className="mr-2" /> View GitHub
                     </Button>
                   </Link>
-                  <Link href="https://www.linkedin.com/in/naol-mitiku-0a48a423b/" target="_blank">
+                  <Link href="https://www.linkedin.com/in/naol-mitiku-0a48a423b/" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-cyan-500 text-cyan-500">
                       <Linkedin className="mr-2" /> LinkedIn
                     </Button>
